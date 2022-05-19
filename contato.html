@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--Identifica a versão do html-->
+<html lang="pt-br">
+<!-- Idioma d página-->
+
+<head>
+    <!--Parte pensante "ligações"-->
+    <meta charset="UTF-8"> <!-- Garantia de acentuação da página-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com o edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Altera a escala da página para outros dispositivos-->
+    <title>FutureWeb - Contato</title>
+    <!--Título do documento-->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+   
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            <hgroup>
+                <h1>FutureWeb</h1> <!-- Apenas um h1 é colocado em cada página-->
+                <h2>Desenvolvimento Web - Novas Tecnologias</h2>
+            </hgroup>
+        </header>
+
+        <nav id="superior">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="sobre.html">sobre nós</a></li>
+                <li><a href="servicos.html">serviços</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+
+        <figure id="imagens">
+            <img src="images/gerenciamento.jpg" title="Gerenciamento de Inovação"
+                alt="A imagem consiste em uma foto da lateral de um notebook preto e um caderno ao lado, com o texto &quot;Gerenciamento de Inovação&quot; escrito ao centro."
+                id="gerenciamento" />
+
+            <img src="images/projetos.jpg" title="Desenvolvimento de Projetos"
+                alt="A imagem consiste em uma foto de um rapaz com camisa azul segurando escrevendo em um papel com uma caneta prateada, com o texto &quot;Desenvolvimento de Projetos&quot; escrito ao centro."
+                id="projetos" />
+
+            <img src="images/designer-grafico.jpg" title="Desenvolvimento Grafico"
+                alt="A imagem consiste em seis canetas marca texto das cores azul, roxo, verde, amarelo, laranja e vermelho, com o texto &quot;Desenvolvimento Grafico&quot; escrito ao centro."
+                id="designer-grafico" />
+        </figure>
+
+        <section id="principal">
+            <div id="formulario">
+                <h2>Fale Conosco</h2>
+                <form action="controllers/contatocontroller.php" method="POST" name="frmcontato" oninput="out_dias.value=parseInt(dias.value)">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="txtNome" tabindex="1" autofocus>
+                    
+                    <br />
+                    Sexo:
+                    <input type="radio" id="masc" name="txtSex" value="M">
+                    <label for="masc">Masculino</label>
+                    <input type="radio" id="fem" name="txtSex" value="F">
+                    <label for="fem">Feminino</label>
+
+                    <br />
+                    Categorias:
+                    <input type="checkbox" id="arq" name="txtArq" value="Arquitetura">
+                    <label for="arq">Arquitetura</label>
+                    <input type="checkbox" id="edu" name="txtEdu" value="Educação">
+                    <label for="edu">Educação</label>
+                    <input type="checkbox" id="eng" name="txtEng" value="Engenharia">
+                    <label for="eng">Engenharia</label>
+                    
+                    <br />
+                    <label for="mes">Mês do Nascimento:</label>
+                    <input type="month" id="mes" name="txtMes" tabindex="2">
+
+                    <br />
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="txtEmail" maxlength="35" required
+                        placeholder="seuemail@dominio.com.br" tabindex="3">
+
+                    <br />
+                    <label for="site">Site:</label>
+                    <input type="url" id="site" name="txtSite" placeholder="https://www.seusite.com.br" tabindex="4">
+
+                    <br />
+                    <label for="paginas">Quantidade de Páginas:</label>
+                    <input type="number" id="paginas" name="intPaginas" max="10" min="0" tabindex="5">
+                    
+                    <br />
+                    <label for="prazo">Prazo de entrega em meses:</label>
+                    <input type="number" id="prazo" name="intPrazo" maxlenght="2" max="24" min="2" step="2"
+                        tabindex="6">
+
+
+                    <br />
+                    <label for="dias">Prazo de entrega em dias:</label>
+                    <input type="range" name="intDias" id="dias" step="20" value="0" max="100">
+                    <output name="out_dias" onforminput="value=dias.valueAsNumber" for="dias">2</output>
+
+                    <br />
+                    <label for="data">Data do Pedido:</label>
+                    <input type="date" id="data" name="dtdData">
+
+                    <br />
+                    <label for="hora">Hora do Pedido:</label>
+                    <input type="time" id="hora" name="tHora">
+
+                    <br />
+                    <label for="cor">Cor do Site:</label>
+                    <input type="color" id="cor" name="txtCor">
+
+                    <br />
+                    <label for="servicos">Tipo do Serviço:</label>
+                    <select name="txtServicos" id="servicos">
+                    <option value="WebSite">Web</option>
+                    <option value="Hospedagem">Hospedagem</option>
+                    <option value="Email">E-mail</option>
+                    <option value="CEOs">CEO</option>
+                    </select>
+                    
+
+                    <br />
+                    <label for="obs">Observações:</label><br/>
+                    <textarea name="txtObs" id="obs" cols="30" rows="10"></textarea>
+                    <br />
+                    <input type="submit" id="enviar" name="btnEnviar" value="Enviar formulário">
+                    <input type="reset" id="limpar" name="btnLimpar" value="Limpar formulário">
+
+                </form>
+            </div>
+        </section>
+
+        <nav id="inferior">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="sobre.html">sobre nós</a></li>
+                <li><a href="servicos.html">serviços</a></li>
+                <li><a href="contato.htmls">contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <figure id="midias_sociais">
+            <a href=http://www.twitter.com target="_blank">
+                <img src="images\twitter.png"
+                    alt="Logo da Rede Social Twitter composto por um quadrado azul claro com bordas arrendondadas e um &quot;T&quot; no colorido de azul marinho"
+                    title="Logo do Twitter" id="twitter"></a>
+
+            <a href=https://www.facebook.com target="_blank">
+                <img src="images\facebook.png"
+                    alt="Logo da Rede Social Facebook composto por um quadrado azul escuro com bordas arrendondadas e um &quot;F&quot; branco no centro"
+                    title="Logo do Facebook" id="facebook"></a>
+
+            <a href=https://www.blogger.com target="_blank">
+                <img src="images\blogger.png"
+                    alt="Logo do gerenciador de blogs chamado Blogger composto por um quadrado laranja com bordas arrendondadase um &quot;B&quot; branco no centro"
+                    title="Logo do Blogger" id="blogger"></a>
+        </figure>
+
+        <a href="#" target="_blank">Política de Privacidade</a>
+    </footer>
+</body>
+
+</html>

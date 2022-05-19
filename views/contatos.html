@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/contatos.css">
+    <title>Contatos</title>
+</head>
+
+<body id="ctts">
+    <h2>Contatos</h2>
+    <form id="frmContatos" action="../controllers/envio.php" method="POST">
+        <label class="rotulo" for="nome">Nome:</label>
+        <input type="text" id="nome" name="txtNome"    tabindex="1" autofocus placeholder="Digite seu nome">
+
+        <!-- <br />
+        <label class="rotulo" for="dataNasc">Data de Nascimento:</label>
+        <input type="date" id="dataNasc" name="dateData"   tabindex="2" autofocus>
+
+        <br />
+        <label class="rotulo" for="cpf">CPF:</label>
+        <input type="text" id="CPF" name="txtCPF"   tabindex="3" pattern="[0-9]{11}" minlenght="11" maxlength="11" autofocus placeholder="xxx.xxx.xxx-xx"> -->
+
+        <br />
+        <label class="rotulo" for="cep">CEP:</label>
+        <input type="text" id="CEP" name="txtCEP"  pattern="[0-9]{8}" tabindex="4" minlenght="8" maxlength="8" autofocus placeholder="Informe o CEP">
+
+        <br />
+        <label class="rotulo" for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="txtEnd"  tabindex="5" autofocus placeholder="Informe seu endereço">
+
+        <br />
+        <label class="rotulo" for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="txtBairro"   tabindex="6" autofocus placeholder="Informe o bairro">
+
+        <br />
+        <label class="rotulo" for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="txtCidade"  tabindex="7" autofocus placeholder="Informe a cidade">
+
+        <br />
+        <label class="rotulo" for="uf">UF:</label>
+        <input type="text" id="uf" name="txtUf" tabindex="8"  autofocus placeholder="UF">
+
+        <br />
+        <label class="rotulo" for="email">E-mail:</label>
+        <input type="email" id="email" name="txtEmail" maxlength="35" required placeholder="Email" tabindex="9">
+
+        <br />
+        <label class="rotulo" for="tele">Telefone:</label>
+        <input type="tel" id="tele" name="numTele" maxlength="11" pattern="[0-9]{11}" placeholder="Insira seu telefone"
+            tabindex="9">
+        <br />
+        <input type="submit" id="enviar" name="btnEnviar" value="Salvar" />
+        <input type="submit" id="listar" name="btnListar" value="Listar">
+        <input type="reset" id="limpar" name="btnLimpar" value="Limpar">
+    </form>
+</body>
+
+</html>
