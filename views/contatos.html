@@ -5,17 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="../css/contatos.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/ui-lightness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+    <script type="text/javascript" src="../js/ValidaForm.js"></script>
+    
     <title>Contatos</title>
 </head>
 
-<body id="ctts">
-    <h2>Contatos</h2>
-    <form id="frmContatos" action="../controllers/envio.php" method="POST">
-        <label class="rotulo" for="nome">Nome:</label>
-        <input type="text" id="nome" name="txtNome"    tabindex="1" autofocus placeholder="Digite seu nome">
+<div class="row">
 
-        <!-- <br />
+    <body id="ctts">
+        <section class="col-lg-12 col-md-12">
+            <h2>Contatos</h2>
+            <form id="frmContatos" action="" method="">
+                <label class="rotulo" for="nome">Nome:</label>
+                <input class="botao" type="text" id="txtNome" name="txtNome" tabindex="1" autofocus
+                    placeholder="Digite seu nome">
+
+                <!-- <br />
         <label class="rotulo" for="dataNasc">Data de Nascimento:</label>
         <input type="date" id="dataNasc" name="dateData"   tabindex="2" autofocus>
 
@@ -23,39 +44,69 @@
         <label class="rotulo" for="cpf">CPF:</label>
         <input type="text" id="CPF" name="txtCPF"   tabindex="3" pattern="[0-9]{11}" minlenght="11" maxlength="11" autofocus placeholder="xxx.xxx.xxx-xx"> -->
 
-        <br />
-        <label class="rotulo" for="cep">CEP:</label>
-        <input type="text" id="CEP" name="txtCEP"  pattern="[0-9]{8}" tabindex="4" minlenght="8" maxlength="8" autofocus placeholder="Informe o CEP">
+                <br />
+                <label class="rotulo" for="cep">CEP:</label>
+                <input class="botao" type="text" id="txtCEP" name="txtCEP" pattern="[0-9]{8}" tabindex="4" minlenght="8"
+                    maxlength="9" autofocus placeholder="Informe o CEP">
+                <a href="#" id="link_cep" class="link-btn ui-icon-search"><span
+                        class="ui-icon ui-icon-search"></span>Buscar CEP</a>
 
-        <br />
-        <label class="rotulo" for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="txtEnd"  tabindex="5" autofocus placeholder="Informe seu endereço">
+                <br />
+                <label class="rotulo" for="endereco">Endereço:</label>
+                <input class="botao" type="text" id="txtEnd" name="txtEnd" tabindex="5" autofocus
+                    placeholder="Informe seu endereço">
 
-        <br />
-        <label class="rotulo" for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="txtBairro"   tabindex="6" autofocus placeholder="Informe o bairro">
+                <br />
+                <label class="rotulo" for="bairro">Bairro:</label>
+                <input class="botao" type="text" id="txtBairro" name="txtBairro" tabindex="6" autofocus
+                    placeholder="Informe o bairro">
 
-        <br />
-        <label class="rotulo" for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="txtCidade"  tabindex="7" autofocus placeholder="Informe a cidade">
+                <br />
+                <label class="rotulo" for="cidade">Cidade:</label>
+                <input class="botao" type="text" id="txtCidade" name="txtCidade" tabindex="7" autofocus
+                    placeholder="Informe a cidade">
 
-        <br />
-        <label class="rotulo" for="uf">UF:</label>
-        <input type="text" id="uf" name="txtUf" tabindex="8"  autofocus placeholder="UF">
+                <br />
+                <label class="rotulo" for="uf">UF:</label>
+                <input class="botao" type="text" id="txtUf" name="txtUf" tabindex="8" autofocus placeholder="UF">
 
-        <br />
-        <label class="rotulo" for="email">E-mail:</label>
-        <input type="email" id="email" name="txtEmail" maxlength="35" required placeholder="Email" tabindex="9">
+                <br />
+                <label class="rotulo" for="email">E-mail:</label>
+                <input class="botao" type="email" id="txtEmail" name="txtEmail" maxlength="35" required
+                    placeholder="Email" tabindex="9">
 
-        <br />
-        <label class="rotulo" for="tele">Telefone:</label>
-        <input type="tel" id="tele" name="numTele" maxlength="11" pattern="[0-9]{11}" placeholder="Insira seu telefone"
-            tabindex="9">
-        <br />
-        <input type="submit" id="enviar" name="btnEnviar" value="Salvar" />
-        <input type="submit" id="listar" name="btnListar" value="Listar">
-        <input type="reset" id="limpar" name="btnLimpar" value="Limpar">
-    </form>
+                <br />
+                <label class="rotulo" for="tele">Telefone:</label>
+                <input class="botao" type="text" id="numTele" name="numTele" maxlength="14" placeholder="Insira seu telefone" tabindex="9">
+                <br />
+                <input class="botao" type="button" id="btnEnviar" name="btnEnviar" value="Salvar">
+                <input class="botao" type="button" id="btnListar" name="btnListar" value="Listar">
+                <input class="botao" type="reset" id="btnLimpar" name="btnLimpar" value="Limpar">
+            </form>
+            <p><a href='usuarios.html'>Usuários</a></p>
+            <span id="Resultado" class="pop"></span>
+            <div id="dialogo" title="Atenção">
+                <p id="Mensagem"></p>
+                
+        </section>
+</div>
+
+
+
+
+<!-- <div class="modal" id="lista">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+             <div class="modal-body">
+                <span id="Resultado" class="pop"></span>
+                <div id="dialog" title="Atenção">
+                    <p id="resultado"></p>
+                </div>
+             </div>
+          </div>
+        </div>
+     </div> -->
 </body>
 
 </html>

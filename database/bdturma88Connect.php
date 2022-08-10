@@ -63,7 +63,7 @@ class bdTurmaConnect {
             //o resultado vai para a variavel row após pesquisar todas as linhas do DB
              while($row = $resultado->fetch(PDO::FETCH_ASSOC)){
                 //os resultados encaminhados para row serão armazenados em uma array da qual contém a condição de converter para codificação UTF8
-                $resultset[] = array_map('utf8_encode',$row);
+                $resultset[] = $row;
              }
              
             //Se o resultado não for vazio, retornará o valor do resultest
@@ -120,7 +120,7 @@ class bdTurmaConnect {
            //o resultado vai para a variavel row após pesquisar todas as linhas do DB
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                //os resultados encaminhados para row serão armazenados em uma array da qual contém a condição de converter para codificação UTF8
-               $resultset[] = array_map('utf8_encode',$row);
+               $resultset[] = $row;
             }
             
            //Se o resultado não for vazio, retornará o valor do resultest
@@ -150,7 +150,7 @@ class bdTurmaConnect {
            //o resultado vai para a variavel row após pesquisar todas as linhas do DB
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                //os resultados encaminhados para row serão armazenados em uma array da qual contém a condição de converter para codificação UTF8
-               $resultset[] = array_map('utf8_encode',$row);
+               $resultset[] = $row;
             }
             
            //Se o resultado não for vazio, retornará o valor do resultest

@@ -1,26 +1,54 @@
-/* CSS Document */
-
-h2{
-padding: 0 120px;
+CSS Document
+body{
+    overflow: hidden;
+    border: 1px #000 solid;
 }
-
-input{
-    text-align: center;
-    margin: 0 50px;
-    border-radius: 7px;
-}
-label{
-    font-size: smaller;
-    display:inline-block;
-    max-width: 190px;
-    width: 190px;
-    margin: 7px 0; 
-    letter-spacing: -1.1px;
-
-}
-#ctts{
-    justify-content: start;
-    background-color: rgba(250, 235, 215, 0.9);
-    font-size: 30px;}
-
+section h2{
+    font-size: 250%;
+    padding-bottom: 5%;
+    border: 1px #000 solid;
     
+}
+section{
+    /* text-align: center; */
+    background-color: rgba(250, 235, 215, 0.9);
+    border: 1px #000 solid;
+}
+form{
+    padding-bottom: 3.5%;
+    border: 1px #000 solid;
+    
+}
+
+.botao{
+    text-align: center;
+    margin: 1% 50px;
+    border-radius: 7px;
+    border: 1px #000 solid;
+    
+}
+.rotulo{
+    font-size: 150%;
+    /* display:inline-block; */
+    width: 190px;
+    letter-spacing: -1.1px;
+    text-align: left;    
+    border: 1px #000 solid;
+}
+
+.link-btn{
+    padding: .4em 1em .4em 20px;
+    text-decoration: nome;
+    position: relative;
+    margin: 5px 0 0 5px;
+    border: 1px #000 solid;
+}
+
+.link-btn span.ui.icon{
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+    border: 1px #000 solid;
+}

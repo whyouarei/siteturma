@@ -296,14 +296,34 @@ article ul li a:hover {
 
 }
 
-#manu{
+#manu {
     padding: 0 14%;
     background-color: rgba(250, 235, 215, 0.9);
-    
+
 }
 
-#formulario{
+#formulario {
     padding: 0 25%;
     background-color: rgba(250, 235, 215, 0.9);
     font-size: 20px;
+}
+
+.h2 {
+    padding: 0 120px;
+}
+
+.botao {
+    text-align: center;
+    margin: 0 50px;
+    border-radius: 7px;
+}
+
+.rotulo {
+    font-size: smaller;
+    display: inline-block;
+    max-width: 190px;
+    width: 190px;
+    margin: 7px 0;
+    letter-spacing: -1.1px;
+
 }

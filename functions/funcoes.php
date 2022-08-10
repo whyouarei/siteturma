@@ -35,7 +35,7 @@ function listar(){
                 <tbody>";
     $retorno = $tabela;
 
-    foreach ($_SESSION['lista'] as $linhadoarray){
+    foreach ($_SESSION['lista'] as $linhadoarray){ 
         $retorno .="<tr>";
         foreach ($linhadoarray as $coluna => $conteudodacoluna){
             $retorno .="<td>" .$conteudodacoluna ."</td>";

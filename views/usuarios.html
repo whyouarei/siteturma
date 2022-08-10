@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/ui-lightness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src ="../js/ValidaForm.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/contatos.css">
+    <title>Contatos</title>
+</head>
+
+<body id="ctts">
+    <h2>Usuários</h2>
+    <form id="frmUsuarios" action="" method="">
+        <label class="rotulo" for="nome">Usuário:</label>
+        <input type="text" id="txtUser" name="txtUser" tabindex="1" autofocus placeholder="Digite seu Usuário">
+
+        <br />
+        <label class="rotulo" for="email">E-mail:</label>
+        <input type="text" id="txtEmail" name="txtEmail" placeholder="Informe seu E-mail">
+
+        <br />
+        <label class="rotulo" for="senha">Senha:</label>
+        <input type="text" id="txtPass" name="txtPass" tabindex="5" autofocus placeholder="Informe sua senha">
+
+        <br />
+        <input type="button" id="btnEnviar" name="btnEnviar" value="Salvar">
+        <input type="button" id="btnListar" name="btnListar" value="Listar">
+        <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar">
+    </form>
+    <p><a href='contatos.html'>Contatos</a></p>
+    <span id="Resultado" class="pop"></span>
+
+    <div id="dialog" title="Atenção">
+        <p id="resultado"></p>
+    </div>
+</body>
+
+</html>
